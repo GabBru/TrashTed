@@ -2,13 +2,20 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
 
     <persistence-unit name="NewPersistenceUnit">
-        <provider>oracle.toplink.essentials.PersistenceProvider</provider>
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>databaseclass.Stock</class>
+        <class>databaseclass.Client</class>
+        <class>databaseclass.Commande</class>
+        <class>databaseclass.Couleur</class>
+        <class>databaseclass.LigneCommande</class>
+        <class>databaseclass.TypeVetements</class>
+        <class>databaseclass.Marque</class>
         <properties>
-            <property name="toplink.jdbc.url" value=""/>
-            <property name="toplink.jdbc.driver" value=""/>
-            <property name="toplink.jdbc.user" value=""/>
-            <property name="toplink.jdbc.password" value=""/>
-            <property name="toplink.logging.level" value="INFO"/>
+            <property name="eclipselink.jdbc.user" value="9A6bZzn9dl"/>
+            <property name="eclipselink.jdbc.password" value="DCcYKfQwWR"/>
+            <property name="eclipselink.logging.level" value="INFO"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://remotemysql.com:3306/9A6bZzn9dl?useSSL=false"/>
+            <property name="eclipselink.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
         </properties>
     </persistence-unit>
 </persistence>
