@@ -13,7 +13,7 @@ public class LigneCommandeDAO {
     public List<LigneCommande> findAll(){
         EntityManagerFactory f = Persistence.createEntityManagerFactory("NewPersistenceUnit");
         EntityManager em = f.createEntityManager();
-        Query request = em.createQuery("select lcmd from LigneCommande lcmd");
+        Query request = em.createQuery("select j from LigneCommande j");
         return request.getResultList();
     }
 }

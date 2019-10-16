@@ -12,7 +12,7 @@ public class CouleurDAO {
     public List<Couleur> findAll(){
         EntityManagerFactory f = Persistence.createEntityManagerFactory("NewPersistenceUnit");
         EntityManager em = f.createEntityManager();
-        Query request = em.createQuery("select clr from Couleur clr");
+        Query request = em.createQuery("select c from Couleur c");
         return request.getResultList();
     }
 }

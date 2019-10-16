@@ -14,7 +14,7 @@ public class CommandeDAO {
     public List<Commande> findAll(){
         EntityManagerFactory f = Persistence.createEntityManagerFactory("NewPersistenceUnit");
         EntityManager em = f.createEntityManager();
-        Query request = em.createQuery("select cmd from Commande cmd");
+        Query request = em.createQuery("select c from Commande c");
         return request.getResultList();
     }
 }

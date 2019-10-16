@@ -13,7 +13,7 @@ public class TypeVetementsDAO {
     public List<TypeVetements> findAll(){
         EntityManagerFactory f = Persistence.createEntityManagerFactory("NewPersistenceUnit");
         EntityManager em = f.createEntityManager();
-        Query request = em.createQuery("select tv from TypeVetements tv");
+        Query request = em.createQuery("select t from TypeVetements t");
         return request.getResultList();
     }
 }
