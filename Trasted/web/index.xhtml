@@ -5,8 +5,12 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:head="http://java.sun.com/jsf/html">
+<div class="header">
+    <h1>TrashTed</h1>
+    <p>Application is the best to looks like a funcking hippi</p>
+</div>
 <h:head >
-    <h:outputStylesheet name="table-style.css" library="css"/>
+    <h:outputStylesheet name="tables-style.css" library="css"/>
 </h:head>
 <f:view>
     <!---
@@ -30,7 +34,7 @@
         <br/>
 
 
-    <h:dataTable value="#{listHabit.list}" var="h"
+    <h:dataTable value="#{listHabit.list}" width="100%" var="h"
                  styleClass="order-table"
                  headerClass="order-table-header"
                  rowClasses="order-table-odd-row,order-table-even-row">
@@ -45,6 +49,10 @@
         <h:column>
             <f:facet name="header">Prix</f:facet>
             #{h.prix}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Commande</f:facet>
+            <h:commandButton value="Commmander"/>
         </h:column>
     </h:dataTable>
     </h:form>

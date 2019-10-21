@@ -10,21 +10,28 @@
         <title>login</title>
     </h:head>
     <h:body>
-        <h:form>
-            <h3>Page de connection</h3>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+            <h:form>
+            <h3 class="active">Page de connection </h3>
+                <div class="fadeIn first">
+                    <img src="" alt=""/>
+                </div>
             <h:outputText value="Nom d'utilisateur" />
-            <h:inputText id="username" ></h:inputText>
+            <h:inputText id="username" styleClass="register-form"></h:inputText>
             <h:message for="username"></h:message>
             <br></br><br></br>
 
             <h:outputText value="Mot de passe" />
-            <h:inputSecret id="password" ></h:inputSecret>
+            <h:inputSecret id="password" styleClass="register-form" ></h:inputSecret>
             <h:message for="password"></h:message>
             <br></br><br></br>
 
             <h:commandButton action="adminPage"
                              value="Connection"></h:commandButton>
         </h:form>
+            </div>
+        </div>
     </h:body>
 </f:view>
 </html>
