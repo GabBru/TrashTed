@@ -1,27 +1,26 @@
 package Javaclass;
 
+import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.logging.Logger;
+
 
 
     @Named
-    @SessionScoped
-   public class ListHabit implements Serializable {
-        protected static final Logger LOGGER = Logger.getLogger(ListHabit.class.getName());
-        private Habit
-                habit1 = new Habit("Croc","Pull",6);
-        private ArrayList<Habit> liste = new ArrayList<>();
-
-        public ArrayList<Habit> getListe() {
-            return liste;
-        }
+    @RequestScoped
+   public class ListHabit {
+        private ArrayList<Habit> list = new ArrayList<>();
 
         public ListHabit (){
-            liste.add(habit1);
-
+            list.add(new Habit ("Croptop", "Pull", 6, 4));
+            list.add(new Habit ("Derolji", "Jeans", 34, 11));
         }
+
+        public ArrayList<Habit> getList() {
+            return list;
+        }
+
     }
 

@@ -3,22 +3,30 @@ package Javaclass;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
-
-
     @Named
     @RequestScoped
     public class Habit {
         private String nom;
         private String type;
-        private Integer prix;
-        public Habit (){}
+        private Integer prix, quantite;
 
-        public Habit(String nom, String type, Integer prix) {
+        public Habit() {
+        }
+
+        public Habit(String nom, String type, Integer prix, Integer quantite) {
             this.nom = nom;
             this.type = type;
             this.prix = prix;
+            this.quantite = quantite;
         }
 
+        public Integer getQuantite() {
+            return quantite;
+        }
+
+        public void setQuantite(Integer quantite) {
+            this.quantite = quantite;
+        }
 
         public String getNom() {
             return nom;
